@@ -24,10 +24,61 @@
 /* Universal Styles */
 
 body {
-    background-color: var(--lt-seafoam-green);
+    background-color: white;
     font: 1rem/1.5 'Rubik', sans-serif;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Nav */
+
+.sticky-header{
+    background-color: var(--lt-seafoam-green);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+header img {
+    width: 250px;
+}
+
+.toggle-btn {
+    width: 40px;
+}
+
+.toggle {
+    visibility: hidden;
+    cursor: pointer;
+    padding: 1rem 0;
+  }
+
+.nav-bar {
+    display: flex;
+    color: var(--dk-blue);
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    list-style-type: none;
+}
+
+.nav-bar li > a {
+    text-decoration: none;
+    align-items: flex-start;
+    color: var(--white);
+    text-align: right;
+    padding: 0.5rem;
+}
 
 
 /* Search Field */
@@ -37,7 +88,8 @@ body {
     align-items: center;
     border: 2px solid var(--dk-blue);
     border-radius: 10px;
-    padding: 5px;
+    padding: 0.1rem 0.5rem;
+    
 }
   
 .search-field img {
@@ -50,7 +102,7 @@ body {
     background-color: var(--lt-seafoam-green);
     border: none; 
     outline: none;
-    width: 100%; 
+    /* width: 100%;  */
 }
 
 
@@ -58,9 +110,277 @@ body {
 /* Hero Banner */
 
 .hero-banner {
-    background: url('../img/hero.webp') center / cover no-repeat;
-    height: calc(100vh - 400px);
+    background: linear-gradient(90deg, rgba(2,0,36,0.9181034482758621) 0%, rgba(23,9,121,0.8706896551724138) 12%, rgba(0,255,209,1) 100%);
+    height: calc(100vh - 300px);
     justify-content: center;
-    text-align: center;
-    color: var(--white);
 }
+
+h1 {
+    font-family: "Monoton", sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+}
+
+.hero-text {
+    padding: 5rem 2rem;
+    color: var(--lt-seafoam-green);
+}
+
+.hero-text p {
+    width: 60%;
+    font-weight: 100;
+}
+
+.hero-btn {
+    margin: 3rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.lets-together-btn {
+    background-color: var(--seafoam-green);
+    color: var(--dk-blue);
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.view-our-work-btn {
+    background-color: transparent;
+    color: var(--seafoam-green);
+    border: 2px solid var(--seafoam-green);
+    border-radius: 5px;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+/* Our Work */
+
+h2 {
+    font-family: "Monoton", sans-serif;
+    color: var(--md-blue);
+    font-size: 40px;
+    font-weight: 100;
+    text-decoration: underline;
+    text-decoration-color: var(--seafoam-green);
+}
+
+.our-work {
+    padding-bottom: 7rem;
+}
+
+.our-work p {
+    font-weight: 100;
+}
+
+.our-work-text {
+    padding: 5rem 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.grid img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.grid p {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+
+/* Odd-numbered p elements */
+.grid:nth-child(odd) p {
+    background-color: var(--md-blue);
+    color: #fff;
+}
+
+/* Even-numbered p elements */
+.grid:nth-child(even) p {
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+}
+
+.btn-container {
+    display: inline-flex;
+    align-items: center;
+    margin: 2rem 0;
+    /* background-color: transparent;
+    color: var(--md-blue); */
+    border: 2px solid var(--md-blue);
+    border-radius: 5px;
+
+}
+
+.btn-container img {
+    width: 3vh;
+    color: var(--md-blue);
+    margin: 0 3rem 0 0.5rem;
+  }
+
+.default-btn {
+    background-color: transparent;
+    padding: 1rem 0 1rem 3rem;
+    cursor: pointer;
+    border: none; 
+    outline: none;
+}
+
+.our-work > .btn-container {
+    position: absolute;
+    right: 20px;
+    top: 200%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+
+/* What We Do */
+
+.what-we-do {
+    display: flex;
+}
+
+.what-we-do-text {
+    padding: 5rem 2rem;
+}
+
+.grid-container2 {
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.grid-container2 h3 {
+    font-weight: 200;
+    font-size: 30px;
+    color: var(--seafoam-green);
+}
+
+.grid-container2 p {
+    font-weight: 100;
+}
+
+.grid2 img {
+    border-radius: 7px;
+}
+
+.grid2 {
+    border-radius: 10px;
+    padding: 1rem;
+    height: 100%;
+}
+
+/* Who We Are */
+
+.who-we-are {
+    padding: 5rem 2rem;
+    display: flex;
+    background-color: var(--seafoam-green);
+}
+
+.who-we-are img:nth-child(1) {
+    width: 600px
+}
+
+.who-we-are-text {
+    padding: 0 3rem 3rem 3rem;
+}
+
+.who-we-are h2 {
+    text-decoration-color: var(--lt-seafoam-green);
+}
+
+.who-we-are p {
+    padding: 1rem 0;
+}
+
+
+/* Footer Content */
+
+footer {
+    justify-content: space-between;
+}
+
+.footer-text {
+    background-color: var(--md-blue);
+    color: var(--lt-seafoam-green);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+h4 {
+    font-family: "Monoton", sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.bottom-footer {
+    background-color: var(--dk-blue);
+    color: var(--lt-seafoam-green);
+    display: flex;
+    /* padding: 3rem;
+    margin: 4rem; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.office {
+    padding: 1rem 0;
+}
+
+.newsletter {
+    width: 50%;
+}
+
+input[type="email"] {
+    width: 300px;
+    height: 3rem;
+}
+
+.newsletter-btn {
+    padding: 2rem 0;
+}
+
+.subsribe-btn {
+    height: 3rem;
+    background-color: var(--seafoam-green);
+}
+
+.bottom-footer p {
+    padding-left: 3rem;
+}
+
+.bottom-footer svg {
+    color: var(--lt-seafoam-green);
+    width: 5%;
+    height: 100%;
+}
+
+.footer-svg {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 3rem 1rem 1rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 760px) {
+    body {
+        background-color: red;
+    }
+}
+
+
+
+
