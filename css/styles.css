@@ -20,3 +20,47 @@
     height: 0.1rem;
     visibility: hidden;
 }
+
+/* Universal Styles */
+
+body {
+    background-color: var(--lt-seafoam-green);
+    font: 1rem/1.5 'Rubik', sans-serif;
+}
+
+
+
+/* Search Field */
+
+.search-field {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--dk-blue);
+    border-radius: 10px;
+    padding: 5px;
+}
+  
+.search-field img {
+    margin-right: 10px; 
+    width: 20px; 
+    height: 20px; 
+}
+
+.search-field input[type="search"] {
+    background-color: var(--lt-seafoam-green);
+    border: none; 
+    outline: none;
+    width: 100%; 
+}
+
+
+
+/* Hero Banner */
+
+.hero-banner {
+    background: url('../img/hero.webp') center / cover no-repeat;
+    height: calc(100vh - 400px);
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
