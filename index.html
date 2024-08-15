@@ -20,18 +20,23 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/modern-reset.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+		<!-- Scripts -->
+		<script src="js/main.js" defer></script>
   </head>
   <body>
     <header class="sticky-header">
       <div class="container header-content">
-        <img
+        <div class="nav-header">
+					<img
           src="img/svg/creative-studio-logo.svg"
           alt="creative-studio-logo"
-        />
-        <div class="toggle">
-          <img class="toggle-btn" src="img/svg/menu.svg" alt="toggle-button" />
-        </div>
-        <nav>
+					/>
+					<div class="toggle">
+						<img class="toggle-btn" src="img/svg/menu.svg" alt="toggle-button" />
+					</div>
+				</div>
+        <nav class="nav-content">
           <ul class="nav-bar">
             <li><a href="#">SERVICES</a></li>
             <li><a href="#">OUR WORK</a></li>
@@ -58,8 +63,12 @@
             specialize in creating experiences and engagements.
           </p>
           <div class="hero-btn">
-            <button class="lets-together-btn">LET'S WORK TOGETHER!</button>
-            <button class="view-our-work-btn">VIEW OUR WORK</button>
+            <div>
+							<button class="lets-together-btn">LET'S WORK TOGETHER!</button>
+						</div>
+            <div>
+							<button class="view-our-work-btn">VIEW OUR WORK</button>
+						</div>
           </div>
         </div>
       </section>
@@ -172,7 +181,9 @@
       </section>
 
 			<section class="who-we-are">
-				<img src="img/ga-photography-digital-marketing.webp" alt="">
+				<div class="who-we-are-img">
+					<img src="img/ga-photography-digital-marketing.webp" alt="">
+				</div>
 				<div class="who-we-are-text">
 					<h2>WHO WE ARE</h2>
 					<p>We are an award-winning creative multi-discplinary design, development, and digital marketing agency consisting of 60-strong team of designers, engineers, and strategists. We have been crafting digital and brand experiences for over 15 years, and we love all challenges that come our way.</p>
